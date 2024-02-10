@@ -1,22 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Forms Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms Demo</title>
 </head>
 <body>
 <h1>Forms Demo</h1>
 
 <form action="/tacos">
-	<input type="text" placeholder="username">
- 	<input type="password" placeholder="password">
-	<input type="color">
-	<input type="number" placeholder="enter a number">
+    <p>
+        <label for="username">Enter a Username:</label>
+        <input id="username" type="text" placeholder="username">
+    </p>
+    <p>
+        <label for="password">Enter a Password:</label>
+        <input type="password" placeholder="password" id="password">
+    </p>
+    <p>
+        <label for="color">Enter a Color:</label>
+        <input type="color" id="color">
+    </p>
+    <p>
+        <label>
+            Enter a Number:
+            <input type="number" placeholder="enter a number">
+        </label>
+    </p>
 </form>
 
 
 </body>
-</html>
+</html>  

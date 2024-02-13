@@ -27,7 +27,7 @@
         <!--        Alternative way to label an input (less common)-->
         <label>
             Enter a Number:
-            <input type="number" placeholder="enter a number" name="num ">
+            <input type="number" placeholder="enter a number" name="num" min="1" max="1000">
         </label>
     </p>
     <!-- This button doesn't submit the form b/c of the "type" attribute  -->
@@ -76,7 +76,10 @@
             <option value="veg">Vegetarian</option>
             <option value="steak">Steak</option>
         </select>
-
+    </p>
+    <p>
+        <label for="cheese">Amount of Cheese:</label>
+        <input type="range" id="cheese" min="1" max="100" value="75" name="cheese_level">
     </p>
     <button>submit</button>
 </form>

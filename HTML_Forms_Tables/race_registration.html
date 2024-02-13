@@ -1,40 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Form</title>
+</head>
+<body>
 <h1>Race Registration!</h1>
-<main>
     <form action="/race">
-        <p>
-            <label for="first name">First Name</label>
-            <input type="text" id="first name" name="firstName" placeholder="first name">
-            <label for="last name">Last Name</label>
-            <input type="text" id="last name" name="lastName" placeholder="last name">
-        </p>
-        <h3>Select a Race:</h3>
-        <p>
-            <input type="radio" id="5k" name="5k" value="5k">
-            <label for="5k">Fun Run 5k</label>
-        </p>
-        <p>
-            <input type="radio" id="half" name="half" value="half">
+        <div>
+            <label for="first">First Name</label>
+            <input type="text" id="first" name="firstName" placeholder="first name" required>
+            <label for="last">Last Name</label>
+            <input type="text" id="last" name="lastName" placeholder="last name" required>
+        </div>
+        <p>Select a Race:</p>
+        <div>
+            <input type="radio" id="funrun" name="race" value="funrun">
+             <label for="funrun">Fun Run 5k</label>
+        </div>
+        <div>
+            <input type="radio" id="half" name="race" value="half">
             <label for="half">Half Marathon</label>
-        </p>
-        <p>
-            <input type="radio" id="full" name="full" value="full">
+        </div>
+        <div>
+            <input type="radio" id="full" name="race" value="full">
             <label for="full">Full Marathon</label>
-        </p>
-        <p>
+        </div>
+        <div>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="email">
+            <input type="email" id="email" name="email" placeholder="email" required>
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="password">
-        </p>
-        <p>
+            <input type="password" id="password" name="password" placeholder="password" required>
+        </div>
+        <div>
             <label for="age">Select Age Group</label>
             <select name="age" id="age">
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-                <option value="40">40</option>
+                <option value="kids">under 18</option>
+                <option value="ya">18-30</option>
+                <option value="adults">30-50</option>
+                <option value="seniors">50+</option>
             </select>
-        </p>
-        <button>Register1</button>
+        </div>
+        <button>Register</button>
     </form>
-</main>
+</body>
+</html>

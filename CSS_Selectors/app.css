@@ -45,3 +45,11 @@ h2 + button {
 footer > a {
     color: #a8dadc;
 }
+
+input[type="password"] {
+    color: greenyellow;
+}
+
+a[href*="Google"] {
+    color: magenta;
+}

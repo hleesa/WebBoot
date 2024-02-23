@@ -1,0 +1,35 @@
+.bg-dark {
+    background-color: #121212; /* Adjust this to the dark background you want */
+}
+
+.winner-loser {
+    background-color: #333; /* Adjust this to the background for winner/loser boxes */
+}
+
+.winner-loser .badge {
+    font-size: 1rem; /* Adjust the font size as needed */
+}
+
+.winner-loser .time-score {
+    background-color: #555; /* Adjust this to the background for time score */
+}
+
+.btn-close-white {
+    filter: invert(1); /* Makes the close button white */
+}
+
+.btn-success {
+    background-color: #28a745; /* Bootstrap success color */
+    border: none;
+}
+
+.btn-lg {
+    padding: .5rem 1rem; /* Larger buttons */
+    font-size: 1.25rem; /* Larger font size for better visibility */
+}
+
+.rounded-pill {
+    border-radius: 50rem !important; /* Makes elements fully rounded */
+}
+
+/* You may need to adjust colors and sizes to match the exact design */

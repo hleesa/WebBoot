@@ -1,0 +1,66 @@
+body {
+    padding-top: 0;
+    padding-left: 250px; /* sidebar width */
+}
+
+#sidebarMenu {
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: auto; /* Vertical scroll */
+    padding-top: 20px;
+}
+
+#sidebarMenu .navbar-nav {
+    width: 100%;
+}
+
+#sidebarMenu .nav-link {
+    padding: 0.5rem 1rem; /* Padding for nav links */
+}
+
+/* Optional: Add some hover effect for nav items */
+#sidebarMenu .nav-item:hover {
+    background-color: #555;
+}
+
+/* Optional: Adjust the toggle button appearance */
+#sidebarMenu .navbar-toggler {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+/* Adjust the content area */
+.content-area {
+    margin-left: 250px; /* Equal to sidebar width */
+}
+
+/* 기본 스타일 */
+#sidebarMenu .navbar-collapse {
+    height: auto;
+    max-height: none;
+}
+
+/* 높이에 따른 반응형 스타일 */
+@media (max-height: 600px) {
+    #sidebarMenu .navbar-collapse {
+        max-height: 300px; /* 접힌 상태에서 보여질 최대 높이 */
+        overflow-y: auto; /* 넘치는 내용은 스크롤로 처리 */
+    }
+    #sidebarMenu .navbar-toggler {
+        display: block; /* 토글 버튼을 보여줌 */
+    }
+}
+
+/* 높이가 600px 이상일 때는 항상 펼쳐진 상태 유지 */
+@media (min-height: 601px) {
+    #sidebarMenu .navbar-collapse {
+        height: auto;
+        max-height: none;
+    }
+    #sidebarMenu .navbar-toggler {
+        display: none; /* 토글 버튼을 숨김 */
+    }
+}
+

@@ -54,24 +54,46 @@ const fakeRequestPromise = (url) => {
 //         console.log("ERROR! ", err);
 //     });
 
+// fakeRequestPromise('x.com/api/page1')
+//     .then(() => {
+//         console.log("IT WORK! (page1)");
+//         fakeRequestPromise('x.com/api/page2')
+//             .then(() => {
+//                 console.log("IT WORK! (page2)");
+//                 fakeRequestPromise('x.com/api/page3')
+//                     .then(() => {
+//                         console.log("IT WORK! (page3)");
+//                     })
+//                     .catch(() => {
+//                         console.log("OH NO, ERROR (page3)");
+//                     });
+//             })
+//             .catch(() => {
+//                 console.log("OH NO, ERROR (page2)");
+//             });
+//     })
+//     .catch(() => {
+//         console.log("OH NO, ERROR (page1)");
+//     });
+
 fakeRequestPromise('x.com/api/page1')
-    .then(() => {
+    .then((data) => {
         console.log("IT WORK! (page1)");
-        fakeRequestPromise('x.com/api/page2')
-            .then(() => {
-                console.log("IT WORK! (page2)");
-                fakeRequestPromise('x.com/api/page3')
-                    .then(() => {
-                        console.log("IT WORK! (page3)");
-                    })
-                    .catch(() => {
-                        console.log("OH NO, ERROR (page3)");
-                    });
-            })
-            .catch(() => {
-                console.log("OH NO, ERROR (page2)");
-            });
+        console.log(data);
+        return fakeRequestPromise('x.com/api/page2');
     })
-    .catch(() => {
-        console.log("OH NO, ERROR (page1)");
-    });
+    .then((data) => {
+        console.log("IT WORK! (page2)");
+        console.log(data);
+        return fakeRequestPromise('x.com/api/page3');
+    })
+    .then((data) => {
+        console.log("IT WORK! (page3)");
+        console.log(data);
+    })
+    .catch((err) => {
+        console.log("ON NO, A REQUEST FAILED!");
+        console.log(err);
+    })
+;
+
